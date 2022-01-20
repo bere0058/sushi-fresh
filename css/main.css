@@ -1,0 +1,102 @@
+:root {
+  --first-C-var-O: black;
+  --first-C-var-1: #C3C3C3;
+  --second-C-var-0: #FA8072;
+  --third-C-var-0: #F6D9BB;
+}
+
+/* General Style */
+
+h2,
+.h2 {
+  font-family: 'Heebo', sans-serif;
+}
+
+/* Background image */
+.bg-img-custom {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Navigation */
+.nav, .nav-section {
+  height: min-content;
+}
+.nav * {
+  height: 13vw;
+}
+.nav-item:nth-child(1) {
+  background-image: url(https://www.sushifreshparis.fr/images/logo.png);
+  background-size: contain;
+  width: 45%;
+}
+
+.nav-item:nth-child(2) {
+  background-image: url(/sushi-fresh/img/shopping-cart-outline-svgrepo-com.svg);
+  background-size: contain;
+  width: 20%;
+}
+
+.nav-item:nth-child(3) {
+  background-image: url(/sushi-fresh/img/menu-svgrepo-com.svg);
+  background-size: contain;
+  width: 12%;
+  height: 10vw;
+}
+
+/* Button effect by Satyam Singh from https://codepen.io/Anon_satyam/pen/JjXLoNJ*/
+.box-cameo-salmon {
+  color: var(--third-C-var-0);
+  background-color: var(--second-C-var-0);
+}
+
+span {
+  position: relative;
+  display: inline-flex;
+  width: 50vw;
+  perspective: 1000px;
+}
+
+span a {
+  font-size: 19px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+
+}
+
+span a:before,
+span a:after {
+  padding: 10% 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+}
+.btn-order a:before,
+.btn-order a:after {
+  content: "Order";
+}
+
+.btn-menu>a:before,
+.btn-menu>a:after {
+  content: "Order";
+}
+
+span a:before {
+  color: var(--third-C-var-0);
+  background-color: var(--second-C-var-0);
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+span a:after {
+  color: var(--second-C-var-0);
+  background-color: var(--third-C-var-0);
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+span a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
