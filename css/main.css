@@ -1,21 +1,70 @@
 :root {
-  --first-C-var-O: black;
-  --first-C-var-1: #C3C3C3;
-  --second-C-var-0: #FA8072;
-  --third-C-var-0: #F6D9BB;
+  --first-color-var-O: black;
+  --first-color-var-1: #C3C3C3;
+  --second-color-var-0: #FA8072;
+  --third-color-var-0: #F6D9BB;
+  --first-font-var-0: 'Heebo', sans-serif;
 }
 
 /* General Style */
+body {
+  max-height: 768px;
+  text-align: center;
+  transition: 0.5s;
+}
 
-h2,
-.h2 {
-  font-family: 'Heebo', sans-serif;
+body, .nav-section {
+  background-color: var(--first-color-var-O);
+}
+
+main {
+  padding: 0 12%;
+}
+
+h1, h2,
+.h2, h3 {
+  font-family: var(--first-font-var-0);
+  margin: 0;
+}
+
+h1 {
+  padding: 6% 0;
+  font-size: 13vw;
+}
+
+h2, .h2 {
+  padding: 4% 0;
+  font-size: 10vw;
+  color: var(--third-color-var-0);
+}
+
+h3, .h3 {
+  color: var(--second-color-var-0);
+  padding: 4% 0;
+  font-size: 8vw;
+}
+
+p, .p {
+  font-size: 5vw;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li:last-child {
+  padding-bottom: 10%;
 }
 
 /* Background image */
 .bg-img-custom {
   background-repeat: no-repeat;
   background-position: center;
+}
+.logo-section {
+  height: 50vh;
+  background-image: url(https://www.sushifreshparis.fr/images/logo.png);
 }
 /* Navigation */
 .nav, .nav-section {
@@ -43,29 +92,52 @@ h2,
   height: 10vw;
 }
 
-/* Button effect by Satyam Singh from https://codepen.io/Anon_satyam/pen/JjXLoNJ*/
-.box-cameo-salmon {
-  color: var(--third-C-var-0);
-  background-color: var(--second-C-var-0);
+/* Displayed nav */
+
+.nav-display {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.438);
+  transform: translateX(-100%);
+  z-index: 1010;
+  transition: 0.5s ease-in;
 }
 
-span {
+.nav-display-move {
+  transform: translateX(0);
+}
+.h2 > a {
+  color: var(--third-color-var-0);
+  text-decoration: none;
+}
+
+/* Effects */
+
+.blur-effect {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  transition: 0.5s;
+}
+
+/* Button effect by Satyam Singh from https://codepen.io/Anon_satyam/pen/JjXLoNJ*/
+
+/* For standard buttons */
+.btn-span {
   position: relative;
   display: inline-flex;
   width: 50vw;
   perspective: 1000px;
 }
 
-span a {
+.btn-span div {
   font-size: 19px;
   transform-style: preserve-3d;
   transform: translateZ(-25px);
-  transition: transform .25s;
+  transition: transform .15s;
 
 }
 
-span a:before,
-span a:after {
+.btn-span div:before,
+.btn-span div:after {
   padding: 10% 0;
   position: absolute;
   display: flex;
@@ -75,28 +147,62 @@ span a:after {
   border-radius: 5px;
   width: 100%;
 }
-.btn-order a:before,
-.btn-order a:after {
-  content: "Order";
-}
 
-.btn-menu>a:before,
-.btn-menu>a:after {
-  content: "Order";
-}
-
-span a:before {
-  color: var(--third-C-var-0);
-  background-color: var(--second-C-var-0);
+.btn-span div:before {
+  color: var(--third-color-var-0);
+  background-color: var(--second-color-var-0);
   transform: rotateY(0deg) translateZ(25px);
 }
 
-span a:after {
-  color: var(--second-C-var-0);
-  background-color: var(--third-C-var-0);
+.btn-span div:after {
+  color: var(--second-color-var-0);
+  background-color: var(--third-color-var-0);
   transform: rotateX(90deg) translateZ(25px);
 }
 
-span a:hover {
+.btn-span div:hover {
   transform: translateZ(-25px) rotateX(-90deg);
+}
+
+/* For inversed button */
+
+.btn-span .btn-variation-1:before {
+  background-color: var(--third-color-var-0);
+  color: var(--second-color-var-0);
+}
+
+.btn-span .btn-variation-1:after {
+  background-color: var(--second-color-var-0);
+  color: var(--third-color-var-0);
+}
+
+/* btn content for each button */
+.btn-order:before,
+.btn-order:after {
+  content: "Order";
+}
+
+.btn-menu:before,
+.btn-menu:after {
+  content: "Menu";
+}
+
+.btn-pickup:before,
+.btn-pickup:after {
+  content: "Pick-up";
+}
+
+.btn-delivery:before,
+.btn-delivery:after {
+  content: "Delivery";
+}
+
+.btn-cash:before,
+.btn-cash:after {
+  content: "Cash";
+}
+
+.btn-card:before,
+.btn-card:after {
+  content: "Credit Card";
 }

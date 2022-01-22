@@ -13,25 +13,86 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="css/home.css">
 </head>
 
-<body class="d-flex bg-dark">
-    <section class="nav-section p-4 w-100">
+<body class="d-flex flex-column text-white">
+    <!-- Navbar template from Bootstrap -->
+    <nav class="nav-section sticky-top p-3 w-100">
         <ul class="nav justify-content-center w-100">
             <li class="nav-item bg-img-custom me-auto">
-                <a class="nav-link" href="#"></a>
+                <a class="nav-link" href="../index.html"></a>
             </li>
             <li class="nav-item bg-img-custom me-auto">
-                <a class="nav-link" aria-current="page" href="#"></a>
+                <a class="nav-link" aria-current="page" href="../order/index.html"></a>
             </li>
-            <li class="nav-item bg-img-custom my-auto me-auto">
-                <a class="nav-link" href="#"></a>
+            <li class="nav-item bg-img-custom my-auto me-auto nav-btn">
             </li>
         </ul>
+    </nav>
+    <section class="nav-display position-fixed w-100">
+        <section class="logo-section w-100 bg-img-custom mt-5"></section>
+        <ul>
+            <li class="h2"><a href="../menu/index.html">Menu</a></li>
+            <li class="h2"><a href="../order/index.html">Order</a></li>
+        </ul>
     </section>
+    <!-- Main Content -->
+    <main>
+        <h1>Menu</h1>
+        <h2>Yaki 1</h2>
+        <picture">
+            <!-- From Eminel Cruz on https://www.pexels.com/fr-fr/photo/nourriture-pique-nique-diner-repas-9867831/ -->
+            <source srcset="img/yakitori.jpeg" sizes="
+                        (max-width: 320px) 320px,
+                        (max-width: 480px) 480px,
+                        (max-width: 640px) 640px,
+                        (max-width: 720px) 720px,
+                        (max-width: 960px) 960px" media="(min-width: 320px)">
+            <img src="img/yakitori.jpeg" class="w-100 py-2" alt="yakitori">
+          </picture>
+        <h3>Yakitori</h3>
+        <ul>
+            <li>Salmon</li>
+            <li>Eggs</li>
+            <li>Chicken</li>
+        </ul>
+        <h2>Yaki 2</h2>
+        <picture">
+            <!-- From Douglas Lopez on https://unsplash.com/photos/LlPLQGgYuio-->
+            <source srcset="img/yakisoba.jpg" sizes="
+                        (max-width: 320px) 320px,
+                        (max-width: 480px) 480px,
+                        (max-width: 640px) 640px,
+                        (max-width: 720px) 720px,
+                        (max-width: 960px) 960px" media="(min-width: 320px)">
+            <img src="img/yakisoba.jpg" class="w-100 py-2" alt="yakisoba">
+          </picture>
+        <h3>Yakisoba</h3>
+        <ul>
+            <li>Gyoza</li>
+            <li>Rice</li>
+            <li>Cheese</li>
+        </ul>
+        <h2>Yaki 3</h2>
+        <picture">
+            <!-- From Fernando Aguilar on https://unsplash.com/photos/ZhX8gMtQjwc -->
+            <source srcset="img/teriyaki.jpg" sizes="
+                        (max-width: 320px) 320px,
+                        (max-width: 480px) 480px,
+                        (max-width: 640px) 640px,
+                        (max-width: 720px) 720px,
+                        (max-width: 960px) 960px" media="(min-width: 320px)">
+            <img src="img/teriyaki.jpg" class="w-100 py-2" alt="teriyaki">
+          </picture>
+        <h3>Teriyaki</h3>
+        <ul>
+            <li>Avocado</li>
+            <li>Rice</li>
+            <li>Salmon</li>
+        </ul>
+    </main>
     <footer>
 
     </footer>
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
 </body>

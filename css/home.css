@@ -4,10 +4,6 @@ body {
   background-attachment: fixed;
     height: 100vh;
 }
-.logo-section {
-    height: 50vh;
-    background-image: url(https://www.sushifreshparis.fr/images/logo.png);
-}
 .btn-section-box {
     height: min-content;
     padding-bottom: 10%;
